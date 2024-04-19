@@ -16,7 +16,6 @@ df = pd.read_csv(datafile, index_col=0)
 
 # Obtaining DATA FROM CSV and arranging columns inside a vector
 vard = ['Calorias', 'Carbohidratos', 'Lípidos', 'Proteína', 'Sodio', 'Sodio']
-vard = ['Calorias', 'Carbohidratos', 'Lípidos', 'Proteína', 'Sodio', 'Sodio']
 A = []
 B = []
 C = []
