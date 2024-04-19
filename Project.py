@@ -14,20 +14,6 @@ from sklearn.metrics import mean_squared_error, r2_score  # to obtain some numbe
 datafile = Path('Nutricion.csv')
 df = pd.read_csv(datafile, index_col=0)
 
-# Obtaining DATA FROM CSV and arranging columns inside a vector
-vard = ['Calorias', 'Carbohidratos', 'Lípidos', 'Proteína', 'Sodio', 'Sodio']
-A = []
-B = []
-C = []
-D = []
-E = []
-F = []
-G = []
-Y = df['Calorias']
-X1 = df['Carbohidratos']
-X2 = df['Lípidos']
-X3 = df['Proteína']
-X4 = df['Sodio']
 
 # Obtaining analysis data like median from the columns and inserting them inside vectors
 
@@ -45,14 +31,6 @@ fig2, axes2 = plt.subplots(2, 3)
 fig3, axes3 = plt.subplots(2, 2)
 
 # Creating normalized histograms and adding them to subplot figures
-
-for i in range(1, 6):
-    if (i >= 0) and (i <= 3):
-        sns.histplot(df[vard[i - 1]], kde=True, ax=axes2[0, i - 1])
-    elif (i > 3) and (i <= 6):
-        sns.histplot(df[vard[i - 1]], kde=True, ax=axes2[1, i - 4])
-    else:
-        print('error')
 
 # Printing Dataframe table with the data analysis like median, mode, etc.
 
